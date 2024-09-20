@@ -191,6 +191,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &130062025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130062027}
+  - component: {fileID: 130062026}
+  m_Layer: 0
+  m_Name: ImageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &130062026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130062025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904058de0b401409dbbc48b963b6dbed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  im1: {fileID: 1582901664}
+  im2: {fileID: 608310207}
+  im3: {fileID: 616400736}
+  im4: {fileID: 1733647467}
+  im5: {fileID: 452153670}
+  im6: {fileID: 451187213}
+  im7: {fileID: 583239412}
+  im8: {fileID: 2011209867}
+  im9: {fileID: 1319859500}
+  ph1: {fileID: 1267162408}
+  ph2: {fileID: 869760310}
+  ph3: {fileID: 792563997}
+  ph4: {fileID: 1170636348}
+  ph5: {fileID: 643550842}
+  ph6: {fileID: 2085357395}
+  ph7: {fileID: 2061639295}
+  ph8: {fileID: 619242199}
+  ph9: {fileID: 2018788155}
+  AllFlower:
+  - {fileID: 1582901664}
+  - {fileID: 608310207}
+  - {fileID: 616400736}
+  - {fileID: 1733647467}
+  - {fileID: 452153670}
+  - {fileID: 451187213}
+  - {fileID: 583239412}
+  - {fileID: 2011209867}
+  - {fileID: 1319859500}
+--- !u!4 &130062027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130062025}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 642, y: 1389, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &265170398
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +314,7 @@ GameObject:
   - component: {fileID: 451187214}
   - component: {fileID: 451187216}
   - component: {fileID: 451187215}
+  - component: {fileID: 451187217}
   m_Layer: 5
   m_Name: 6
   m_TagString: Untagged
@@ -306,6 +379,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451187213}
   m_CullTransparentMesh: 1
+--- !u!114 &451187217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451187213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage6
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage6
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &452153670
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +435,7 @@ GameObject:
   - component: {fileID: 452153671}
   - component: {fileID: 452153673}
   - component: {fileID: 452153672}
+  - component: {fileID: 452153674}
   m_Layer: 5
   m_Name: 5
   m_TagString: Untagged
@@ -381,6 +500,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452153670}
   m_CullTransparentMesh: 1
+--- !u!114 &452153674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452153670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage5
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage5
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &526427595
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +759,7 @@ GameObject:
   - component: {fileID: 583239413}
   - component: {fileID: 583239415}
   - component: {fileID: 583239414}
+  - component: {fileID: 583239416}
   m_Layer: 5
   m_Name: 7
   m_TagString: Untagged
@@ -659,6 +824,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583239412}
   m_CullTransparentMesh: 1
+--- !u!114 &583239416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583239412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage7
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage7
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &608310207
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +880,7 @@ GameObject:
   - component: {fileID: 608310208}
   - component: {fileID: 608310210}
   - component: {fileID: 608310209}
+  - component: {fileID: 608310211}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -734,6 +945,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608310207}
   m_CullTransparentMesh: 1
+--- !u!114 &608310211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608310207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &616400736
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +1001,7 @@ GameObject:
   - component: {fileID: 616400737}
   - component: {fileID: 616400739}
   - component: {fileID: 616400738}
+  - component: {fileID: 616400740}
   m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
@@ -809,6 +1066,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616400736}
   m_CullTransparentMesh: 1
+--- !u!114 &616400740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616400736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &619242199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1810,7 @@ GameObject:
   - component: {fileID: 1319859501}
   - component: {fileID: 1319859503}
   - component: {fileID: 1319859502}
+  - component: {fileID: 1319859504}
   m_Layer: 5
   m_Name: 9
   m_TagString: Untagged
@@ -1572,6 +1875,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319859500}
   m_CullTransparentMesh: 1
+--- !u!114 &1319859504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319859500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage9
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage9
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1515594291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +2006,7 @@ GameObject:
   - component: {fileID: 1582901665}
   - component: {fileID: 1582901667}
   - component: {fileID: 1582901666}
+  - component: {fileID: 1582901668}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -1722,6 +2071,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582901664}
   m_CullTransparentMesh: 1
+--- !u!114 &1582901668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582901664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1733647467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +2127,7 @@ GameObject:
   - component: {fileID: 1733647468}
   - component: {fileID: 1733647470}
   - component: {fileID: 1733647469}
+  - component: {fileID: 1733647471}
   m_Layer: 5
   m_Name: 4
   m_TagString: Untagged
@@ -1797,6 +2192,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733647467}
   m_CullTransparentMesh: 1
+--- !u!114 &1733647471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733647467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2011209867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +2248,7 @@ GameObject:
   - component: {fileID: 2011209868}
   - component: {fileID: 2011209870}
   - component: {fileID: 2011209869}
+  - component: {fileID: 2011209871}
   m_Layer: 5
   m_Name: 8
   m_TagString: Untagged
@@ -1872,6 +2313,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011209867}
   m_CullTransparentMesh: 1
+--- !u!114 &2011209871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011209867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DragImage8
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130062026}
+          m_TargetAssemblyTypeName: FlowerMovement, Assembly-CSharp
+          m_MethodName: DropImage8
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2018788155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,3 +2590,4 @@ SceneRoots:
   - {fileID: 786663310}
   - {fileID: 36593335}
   - {fileID: 1129582277}
+  - {fileID: 130062027}
