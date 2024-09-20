@@ -7,9 +7,7 @@ public class GameWinControl : MonoBehaviour
 {
     public GameObject im1, im2, im3, im4, im5, im6, im7, im8, im9, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9;
 
-    public static bool youWin;
-
-    public int currentLevel;
+    public int currentLevel = 1;
 
     [SerializeField]
     private GameObject flowerImage;
@@ -31,12 +29,16 @@ public class GameWinControl : MonoBehaviour
             im9.transform.position == ph9.transform.position)
         {
 
-            youWin = true;
             flowerImage.SetActive(true);
             Debug.Log("Level Completed");
-            PlayerPrefs.SetInt("Level1" + currentLevel, 1);
+            PlayerPrefs.SetInt("Level" + currentLevel, 1);
             PlayerPrefs.Save();
         }
+    }
+
+    public void OpenAchievementScene()
+    {
+        SceneManager.LoadScene("AchivementScene");
     }
 
 }

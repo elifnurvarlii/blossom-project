@@ -6,35 +6,26 @@ using UnityEngine.UI;
 public class AchivementManager : MonoBehaviour
 {
 
-    public GameObject achivementPrejab;
+    public GameObject[] achievementIcons; // Her seviyeye karşılık gelen ikonlar
 
-    public Sprite[] sprites;
-
-    private void Start()
+    void Start()
     {
-        CreateAchievement("Flower Category", "Test" , 1);
+        for (int i = 0; i < achievementIcons.Length; i++)
+        {
+            // Kaydedilen seviyeleri kontrol ediyoruz
+            if (PlayerPrefs.GetInt("Level" + i, 0) == 1)
+            {
+                // Seviye tamamlandıysa ikonu aktif hale getiriyoruz
+                achievementIcons[i].SetActive(true);
+                Debug.Log("Level1 tamamlandı");
+            }
+            else
+            {
+                // Seviye tamamlanmadıysa ikonu gizli tutuyoruz
+                achievementIcons[i].SetActive(false);
+            }
+        }
     }
-
-
-    public void CreateAchievement(string category, string title, int spriteIndex)
-    {
-
-        GameObject achivement = (GameObject)Instantiate(achivementPrejab);
-
-        SetAchievementInfo(category, achivement, title, spriteIndex);
-    }
-
-    
-    public void SetAchievementInfo(string category, GameObject achivement, string title, int spriteIndex)
-    {
-
-        achivement.transform.SetParent(GameObject.Find(category).transform);
-        achivement.transform.localScale = new Vector3(1, 1, 1);
-        achivement.transform.GetChild(0).GetComponent<Image>().sprite = sprites[spriteIndex];
-        achivement.transform.GetChild(1).GetComponent<Text>().text = title;
-
-    }
-
 
 
 }
