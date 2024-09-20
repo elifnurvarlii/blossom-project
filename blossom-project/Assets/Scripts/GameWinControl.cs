@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameWinControl : MonoBehaviour
 {
@@ -8,10 +9,20 @@ public class GameWinControl : MonoBehaviour
 
     public static bool youWin;
 
+    public int currentLevel;
+
     [SerializeField]
     private GameObject flowerImage;
 
     void Update()
+    {
+
+        CompleteLevel();
+        
+
+    }
+
+    public void CompleteLevel()
     {
         if (im1.transform.position == ph1.transform.position && im2.transform.position == ph2.transform.position && im3.transform.position == ph3.transform.position &&
             im4.transform.position == ph4.transform.position && im5.transform.position == ph5.transform.position && im6.transform.position == ph6.transform.position &&
@@ -22,9 +33,10 @@ public class GameWinControl : MonoBehaviour
 
             youWin = true;
             flowerImage.SetActive(true);
-
+            Debug.Log("Level Completed");
+            PlayerPrefs.SetInt("Level1" + currentLevel, 1);
+            PlayerPrefs.Save();
         }
-
-
     }
+
 }
